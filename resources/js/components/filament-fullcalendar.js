@@ -13,6 +13,18 @@ export default function fullcalendar({
     eventContent,
     eventDidMount,
     eventWillUnmount,
+    resourceLabelClassNames,
+    resourceLabelContent,
+    resourceLabelDidMount,
+    resourceGroupLabelClassNames,
+    resourceGroupLabelContent,
+    resourceGroupLabelDidMount,
+    resourceLaneClassNames,
+    resourceLaneContent,
+    resourceLaneDidMount,
+    resourceGroupLaneClassNames,
+    resourceGroupLaneContent,
+    resourceGroupLaneDidMount,
 }) {
     return {
         /** @type Calendar */
@@ -32,6 +44,16 @@ export default function fullcalendar({
                 eventContent,
                 eventDidMount,
                 eventWillUnmount,
+                resourceLabelClassNames,
+                resourceLabelContent,
+                resourceLabelDidMount,
+                resourceGroupLabelClassNames,
+                resourceGroupLabelContent,
+                resourceGroupLabelDidMount,
+                resourceLaneClassNames,
+                resourceLaneContent,
+                resourceGroupLaneClassNames,
+                resourceGroupLaneContent,
                 events: (info, successCallback, failureCallback) => {
                     this.$wire
                         .fetchEvents({
@@ -41,6 +63,11 @@ export default function fullcalendar({
                         })
                         .then(successCallback)
                         .catch(failureCallback)
+                },
+                resources: (info, successCallback, failureCallback) => {
+                    this.$wire.fetchResources()
+                      .then(successCallback)
+                      .catch(failureCallback)
                 },
                 eventClick: ({ event, jsEvent }) => {
                     jsEvent.preventDefault()
@@ -131,6 +158,10 @@ export default function fullcalendar({
 
             window.addEventListener('filament-fullcalendar--refresh', () =>
                 this.calendar.refetchEvents(),
+            )
+
+            window.addEventListener('filament-fullcalendar-resources--refresh', () => 
+                this.calendar.refetchResources(),
             )
 
             window.addEventListener('filament-fullcalendar--prev', () =>

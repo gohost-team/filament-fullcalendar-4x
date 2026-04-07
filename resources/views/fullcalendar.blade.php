@@ -22,7 +22,18 @@
                 eventContent: {!! htmlspecialchars($this->eventContent(), ENT_COMPAT) !!},
                 eventDidMount: {!! htmlspecialchars($this->eventDidMount(), ENT_COMPAT) !!},
                 eventWillUnmount: {!! htmlspecialchars($this->eventWillUnmount(), ENT_COMPAT) !!},
-            })" class="filament-fullcalendar"></div>
+                resourceLabelClassNames: {!! htmlspecialchars($this->resourceLabelClassNames(), ENT_COMPAT) !!},
+                resourceLabelContent: {!! htmlspecialchars($this->resourceLabelContent(), ENT_COMPAT) !!},
+                resourceLabelDidMount: {!! htmlspecialchars($this->resourceLabelDidMount(), ENT_COMPAT) !!},
+                resourceGroupLabelClassNames: {!! htmlspecialchars($this->resourceGroupLabelClassNames(), ENT_COMPAT) !!},
+                resourceGroupLabelContent: {!! htmlspecialchars($this->resourceGroupLabelContent(), ENT_COMPAT) !!},
+                resourceGroupLabelDidMount: {!! htmlspecialchars($this->resourceGroupLabelDidMount(), ENT_COMPAT) !!},
+                resourceLaneClassNames: {!! htmlspecialchars($this->resourceLaneClassNames(), ENT_COMPAT) !!},
+                resourceLaneContent: {!! htmlspecialchars($this->resourceLaneContent(), ENT_COMPAT) !!},
+                resourceGroupLaneClassNames: {!! htmlspecialchars($this->resourceGroupLaneClassNames(), ENT_COMPAT) !!},
+                resourceGroupLaneContent: {!! htmlspecialchars($this->resourceGroupLaneContent(), ENT_COMPAT) !!},
+            })">
+        </div>
     </x-filament::section>
 
     <x-filament-actions::modals />

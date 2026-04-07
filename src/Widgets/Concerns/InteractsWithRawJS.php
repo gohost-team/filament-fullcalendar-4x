@@ -61,4 +61,144 @@ trait InteractsWithRawJS
             null
         JS;
     }
+
+    /**
+     * Called right before the element will be removed from the DOM.
+     *
+     * @see https://fullcalendar.io/docs/resource-render-hooks
+     *
+     * @return string
+     */
+    public function resourceLabelClassNames(): string
+    {
+        return <<<JS
+            null
+        JS;
+    }
+
+    /**
+     * Called right before the element will be removed from the DOM.
+     *
+     * @see https://fullcalendar.io/docs/resource-render-hooks
+     *
+     * @return string
+     */
+    public function resourceLabelContent(): string
+    {
+        return <<<JS
+            null
+        JS;
+    }
+
+    /**
+     * Called right before the element will be removed from the DOM.
+     *
+     * @see https://fullcalendar.io/docs/resource-render-hooks
+     *
+     * @return string
+     */
+    public function resourceLabelDidMount(): string
+    {
+        return <<<JS
+            null
+        JS;
+    }
+
+    /**
+     * Called right before the element will be removed from the DOM.
+     *
+     * @see https://fullcalendar.io/docs/resource-group-render-hooks
+     *
+     * @return string
+     */
+    public function resourceGroupLabelClassNames(): string
+    {
+        return <<<JS
+            null
+        JS;
+    }
+
+    /**
+     * Called right before the element will be removed from the DOM.
+     *
+     * @see https://fullcalendar.io/docs/resource-group-render-hooks
+     *
+     * @return string
+     */
+    public function resourceGroupLabelContent(): string
+    {
+        return <<<JS
+            null
+        JS;
+    }
+
+    /**
+     * Called right before the element will be removed from the DOM.
+     *
+     * @see https://fullcalendar.io/docs/resource-group-render-hooks
+     *
+     * @return string
+     */
+    public function resourceGroupLabelDidMount(): string
+    {
+        return <<<JS
+            null
+        JS;
+    }
+
+    /**
+     * Called right before the element will be removed from the DOM.
+     *
+     * @see https://fullcalendar.io/docs/resource-render-hooks
+     *
+     * @return string
+     */
+    public function resourceLaneClassNames(): string
+    {
+        return <<<JS
+            null
+        JS;
+    }
+
+    /**
+     * Called right before the element will be removed from the DOM.
+     *
+     * @see https://fullcalendar.io/docs/resource-render-hooks
+     *
+     * @return string
+     */
+    public function resourceLaneContent(): string
+    {
+        return <<<JS
+            null
+        JS;
+    }
+
+    /**
+     * Called right before the element will be removed from the DOM.
+     *
+     * @see https://fullcalendar.io/docs/resource-group-render-hooks
+     *
+     * @return string
+     */
+    public function resourceGroupLaneClassNames(): string
+    {
+        return <<<JS
+            null
+        JS;
+    }
+
+    /**
+     * Called right before the element will be removed from the DOM.
+     *
+     * @see https://fullcalendar.io/docs/resource-group-render-hooks
+     *
+     * @return string
+     */
+    public function resourceGroupLaneContent(): string
+    {
+        return <<<JS
+            null
+        JS;
+    }
 }
