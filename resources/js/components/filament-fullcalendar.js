@@ -158,11 +158,20 @@ export default function fullcalendar({
 
             window.fullCalendarInstance = this.calendar
 
+            // Listen to both Livewire events and DOM events for compatibility
+            Livewire.on('filament-fullcalendar--refresh', () =>
+                this.calendar.refetchEvents(),
+            )
+
+            Livewire.on('filament-fullcalendar-resources--refresh', () =>
+                this.calendar.refetchResources(),
+            )
+
             window.addEventListener('filament-fullcalendar--refresh', () =>
                 this.calendar.refetchEvents(),
             )
 
-            window.addEventListener('filament-fullcalendar-resources--refresh', () => 
+            window.addEventListener('filament-fullcalendar-resources--refresh', () =>
                 this.calendar.refetchResources(),
             )
 

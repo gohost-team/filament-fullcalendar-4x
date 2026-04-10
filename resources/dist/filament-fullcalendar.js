@@ -19614,7 +19614,13 @@ function MR({
             G0
           );
         }
-      }), this.calendar.render(), window.fullCalendarInstance = this.calendar, window.addEventListener(
+      }), this.calendar.render(), window.fullCalendarInstance = this.calendar, Livewire.on(
+        "filament-fullcalendar--refresh",
+        () => this.calendar.refetchEvents()
+      ), Livewire.on(
+        "filament-fullcalendar-resources--refresh",
+        () => this.calendar.refetchResources()
+      ), window.addEventListener(
         "filament-fullcalendar--refresh",
         () => this.calendar.refetchEvents()
       ), window.addEventListener(
