@@ -19614,7 +19614,7 @@ function MR({
             G0
           );
         }
-      }), this.calendar.render(), window.addEventListener(
+      }), this.calendar.render(), window.fullCalendarInstance = this.calendar, window.addEventListener(
         "filament-fullcalendar--refresh",
         () => this.calendar.refetchEvents()
       ), window.addEventListener(

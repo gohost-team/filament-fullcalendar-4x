@@ -156,6 +156,8 @@ export default function fullcalendar({
 
             this.calendar.render()
 
+            window.fullCalendarInstance = this.calendar
+
             window.addEventListener('filament-fullcalendar--refresh', () =>
                 this.calendar.refetchEvents(),
             )

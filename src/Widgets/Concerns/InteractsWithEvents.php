@@ -107,6 +107,11 @@ trait InteractsWithEvents
         $this->dispatch('filament-fullcalendar--refresh');
     }
 
+    public function refreshResources(): void
+    {
+        $this->dispatch('filament-fullcalendar-resources--refresh');
+    }
+
     protected function calculateTimezoneOffset(string $start, ?string $end, bool $allDay): array
     {
         $timezone = FilamentFullCalendarPlugin::make()->getTimezone();
