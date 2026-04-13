@@ -17,7 +17,7 @@ trait InteractsWithRecords
     protected ?string $modelLabel = null;
 
     #[Locked]
-    public Model | int | string | null $record;
+    public Model | int | string | null $record = null;
 
     protected static ?string $recordRouteKeyName = null;
 
